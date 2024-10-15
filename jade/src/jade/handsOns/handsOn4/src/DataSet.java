@@ -1,58 +1,20 @@
 package jade.handsOns.handsOn4.src;
-import java.util.Random;
-
 
 /**
  * DataSet
  */
 
 
-public class DataSet {
-
-    private int[][] weatherData;
-    private int[][] dataMatrix;
-    private int[][] hurricaneData;
-
-    private void generateHurricaneData() {
-        Random rand = new Random();
-        hurricaneData = new int[10][5]; // Assuming 5 attributes per year
-        for (int i = 0; i < hurricaneData.length; i++) {
-            for (int j = 0; j < hurricaneData[i].length; j++) {
-                hurricaneData[i][j] = rand.nextInt(100); // Random values between 0 and 99
-            }
-        }
-    }
-
-    public int[][] getHurricaneData() {
-        return hurricaneData;
-    }
+ public class DataSet {
+    private int[][] dataMatrix = {{1, 2, 3,4,5,6,7,8,9}, {4, 8, 12,16,20,24,28,32,36}};
+ 
+    private int[][] testingUnit = {{651, 762, 856, 1063, 1190, 1298, 1421, 1440, 1518 }, {23, 26, 30, 34, 43, 48, 52, 57, 58}};
     
-    public DataSet() {
-        Random rand = new Random();
-        weatherData = new int[10][11];
-        for (int i = 0; i < weatherData.length; i++) {
-            for (int j = 0; j < weatherData[i].length; j++) {
-                weatherData[i][j] = rand.nextInt(100); // Random values between 0 and 99
-            }
-        }
-
-        dataMatrix = new int[2][9];
-        for (int i = 0; i < dataMatrix.length; i++) {
-            for (int j = 0; j < dataMatrix[i].length; j++) {
-                dataMatrix[i][j] = rand.nextInt(100); // Random values between 0 and 99
-            }
-        }
-
-        generateHurricaneData();
-    }
-
-
-    public int[][] getWeatherData() {
-        return weatherData;
-    }
-    
-
     public int[][] getDataMatrix() {
-        return weatherData;
+        return dataMatrix;
+    }
+
+    public int[][] getTestingUnit() {
+        return testingUnit;
     }
 }
